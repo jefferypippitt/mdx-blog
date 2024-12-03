@@ -10,7 +10,15 @@ export async function generateStaticParams() {
   return projects.map((project) => ({ slug: project.metadata.slug }));
 }
 
-export default async function Project({ params }: { params: { slug: string } }) {
+type Props = {
+  params: Promise<{ slug: string }> | undefined;
+};
+
+export default async function Project({ params }: Props) {
+  if (!params) {
+    return notFound();
+  }
+
   const { slug } = await params;
   const project = await getProjectBySlug(slug);
 
