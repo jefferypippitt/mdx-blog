@@ -3,7 +3,7 @@ import { ThemeToggle } from "./theme-toggle";
 
 export function Navigation() {
   return (
-    <nav className="sticky top-0 z-10 border-b bg-background/80 backdrop-blur">
+    <nav className="sticky top-0 z-10 bg-background/80 backdrop-blur">
       <div className="container max-w-4xl py-2">
         <div className="flex items-center justify-between">
           <Link

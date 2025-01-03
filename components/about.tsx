@@ -15,21 +15,21 @@ export default function About() {
   return (
     <section>
       <div className="flex items-center py-4">
-        <div className="relative w-[60px] h-[60px] rounded-full">
-          <div className="relative w-full h-full rounded-full overflow-hidden border-2 border-gray-300 p-1">
+        <div className="relative aspect-square w-[60px]">
+          <div className="relative h-full w-full rounded-full overflow-hidden border-2 border-gray-300 p-1">
             <Image
               src={authorImage}
               alt="Jeffery"
               fill
               priority
-              className="object-cover transition-all duration-300 hover:scale-105"
+              className="object-cover rounded-full transition-all duration-300 hover:scale-105"
             />
           </div>
         </div>
         <div className="ml-4 text-left space-y-1">
           <h1 className="font-medium">Hey, I&apos;m Jeffery</h1>
           <div className="text-sm text-muted-foreground">
-            A computer science graduate{" "}
+            Web developer{" "}
             <span className="inline-block">
               <TextLoop interval={2.5}>
                 {buildingSynonyms.map((word) => (
