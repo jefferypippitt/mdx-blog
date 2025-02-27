@@ -9,7 +9,7 @@ export default async function RecentPosts() {
   return (
     <div>
       <div className="flex justify-between items-center mb-4">
-        <h1 className="font-medium tracking-tight mb-3 text-muted-foreground">Recent Posts</h1>
+        <h1 className="font-medium tracking-tight mb-3">Recent Posts</h1>
         <PostLink />
       </div>
       <Posts posts={posts} />

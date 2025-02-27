@@ -9,11 +9,14 @@ export default function Posts({ posts }: { posts: PostMetadata[] }) {
         <li key={post.slug} className="flex items-start">
           <span className="mt-2 mr-3 block h-1.5 w-1.5 shrink-0 rounded-full bg-foreground/50" />
           <div className="min-w-0 flex-1">
-            <Link href={`/posts/${post.slug}`} className="group block">
+            <div className="block">
               <div className="flex items-center justify-between gap-4">
-                <span className="text-sm font-medium tracking-tight group-hover:text-gray-500">
+                <Link 
+                  href={`/posts/${post.slug}`} 
+                  className="text-sm font-medium tracking-tight hover:text-zinc-600 dark:hover:text-zinc-300 transition-colors"
+                >
                   {post.title}
-                </span>
+                </Link>
                 {post.publishedAt && (
                   <time className="shrink-0 text-xs text-muted-foreground">
                     {formatDate(post.publishedAt)}
@@ -25,7 +28,7 @@ export default function Posts({ posts }: { posts: PostMetadata[] }) {
                   {post.summary}
                 </p>
               )}
-            </Link>
+            </div>
           </div>
         </li>
       ))}

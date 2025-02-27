@@ -1,5 +1,6 @@
 import Image from "next/image";
-import authorImage from "@/public/images/author/github-profile.webp";
+// Remove the local import and use remote image
+// import authorImage from "@/public/images/author/github-profile.webp";
 import Link from "next/link";
 import { TextLoop } from "@/components/text-loop";
 
@@ -15,14 +16,14 @@ export default function About() {
   return (
     <section>
       <div className="flex items-center py-4">
-        <div className="relative aspect-square w-[60px]">
-          <div className="relative h-full w-full rounded-full overflow-hidden border-2 border-gray-300 p-1">
+        <div className="relative aspect-square w-[45px]">
+          <div className="relative h-full w-full rounded-full overflow-hidden border-2 border-zinc-300 dark:border-zinc-600">
             <Image
-              src={authorImage}
-              alt="Jeffery"
+              src="https://github.com/jefferypippitt.png"
+              alt="Jeffery Pippitt"
               fill
               priority
-              className="object-cover rounded-full transition-all duration-300 hover:scale-105"
+              className="object-cover rounded-full blur-[0.5px]"
             />
           </div>
         </div>

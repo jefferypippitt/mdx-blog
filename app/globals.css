@@ -161,3 +161,14 @@
   @apply text-primary bg-secondary/50 rounded px-1.5 py-0.5 font-mono;
 }
 }
+
+
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
