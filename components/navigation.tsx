@@ -10,7 +10,7 @@ export function Navigation() {
             href="/"
             className="text-sm font-medium transition-colors hover:text-foreground/80"
           >
-            jpippitt.io
+            jpippitt.com
           </Link>
 
           <div className="flex items-center gap-2">
